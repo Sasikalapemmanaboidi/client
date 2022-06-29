@@ -20,7 +20,7 @@ const Cart = () => {
   console.log(inddata);
 
   const getinddata = async () => {
-    const res = await fetch(`/getproductsone/${id}`, {
+    const res = await fetch(`https://amazoncloneappapi.herokuapp.com/getproductsone/${id}`, {
       method: "GET",
       headers: {
         "Accept":"application/json",

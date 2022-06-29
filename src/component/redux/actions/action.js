@@ -1,6 +1,6 @@
 export const getProducts =()=>async(dispatch)=>{
     try{
-        const data= await fetch("/getproducts",{
+        const data= await fetch("https://amazoncloneappapi.herokuapp.com/getproducts",{
             method:"GET",
             headers:{
                 "Accept":"application/json",
