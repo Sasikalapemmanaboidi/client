@@ -42,7 +42,7 @@ const Navbaar = () => {
     const [dropen, setDropen] = useState(false)
     //console.log(account);
     const getdetailvaliduser = async()=>{
-        const res = await fetch("https://amazoncloneappapi.herokuapp.com/validuser",{
+        const res = await fetch("/validuser",{
             method:"GET",
             headers:{
                 "Accept":"application/json",
@@ -69,7 +69,7 @@ const Navbaar = () => {
     }
 
     const logoutuser = async () =>{
-        const res2 = await fetch("https://amazoncloneappapi.herokuapp.com/lougout",{
+        const res2 = await fetch("/lougout",{
             method:"GET",
             headers:{
                 "Accept" :"application/json",
