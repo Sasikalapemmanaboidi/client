@@ -89,7 +89,7 @@ const Navbaar = () => {
             toast.success("user logout", {
                 position: "top-center",
             })
-            history("/")
+            history("https://amazoncloneappapi.herokuapp.com/")
             setAccount(false);
         }
     };
@@ -143,16 +143,16 @@ const Navbaar = () => {
             </div>
             <div className='right'>
                 <div className='nav_btn'>
-                    <NavLink to="/login">signin</NavLink>
+                    <NavLink to="https://amazoncloneappapi.herokuapp.com/login">signin</NavLink>
                 </div>
                 <div className='cart_btn'>
                     {
-                        account ?  <NavLink to="/buynow">
+                        account ?  <NavLink to="https://amazoncloneappapi.herokuapp.com/buynow">
                         <Badge badgeContent={account.carts.length} color="secondary">
                            <ShoppingCartIcon id="icon"/>
                         </Badge>
                         </NavLink>:
-                        <NavLink to="/login">
+                        <NavLink to="https://amazoncloneappapi.herokuapp.com/login">
                         <Badge badgeContent={0} color="secondary">
                            <ShoppingCartIcon id="icon"/>
                         </Badge>

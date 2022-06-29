@@ -27,7 +27,7 @@ const SignUp = () => {
         e.preventDefault();
         const {fname,email,mobile,password,cpassword} = udata;
         
-        const res = await fetch("register", {
+        const res = await fetch("https://amazoncloneappapi.herokuapp.com/register", {
             method:"POST",
             headers:{
                 "Accept":"application/json",
@@ -85,7 +85,7 @@ return (
                     <button type="submit" className='signin_btn' onClick={senddata}>Continue</button>
                     <div className='signin_info'>
                         <p>Already have an account? </p>
-                        <NavLink to="/login">signin</NavLink>
+                        <NavLink to="https://amazoncloneappapi.herokuapp.com/login">signin</NavLink>
                     </div> 
                 </form>
             </div>
