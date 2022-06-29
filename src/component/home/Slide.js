@@ -3,7 +3,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import './slide.css';
-//import { products } from './productdata';
+import { products } from './productdata';
 import {NavLink} from "react-router-dom";
 
 const responsive = {
@@ -26,7 +26,7 @@ const responsive = {
   }
 };
 
-const Slide = ({title , products}) => {
+const Slide = ({title}) => {
   return (
     <div className='products_section'>
         <div className='products_deal'>
