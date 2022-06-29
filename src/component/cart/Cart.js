@@ -67,7 +67,7 @@ const Cart = () => {
       alert("user invalid");
     } else {
       // alert("data added in your cart");
-      history("https://amazoncloneappapi.herokuapp.com/buynow")
+      history("/buynow")
       setAccount(data1)
     }
 

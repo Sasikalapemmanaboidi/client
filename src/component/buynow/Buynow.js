@@ -11,7 +11,7 @@ const Buynow = ( ) => {
     console.log(cartdata)
 
     const getdatabuy = async () => {
-        const res = await fetch(`/cartdetails`, {
+        const res = await fetch(`https://amazoncloneappapi.herokuapp.com/cartdetails`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",

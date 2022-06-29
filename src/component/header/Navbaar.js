@@ -42,7 +42,7 @@ const Navbaar = () => {
     const [dropen, setDropen] = useState(false)
     //console.log(account);
     const getdetailvaliduser = async()=>{
-        const res = await fetch("/validuser",{
+        const res = await fetch("https://amazoncloneappapi.herokuapp.com/validuser",{
             method:"GET",
             headers:{
                 "Accept":"application/json",
@@ -69,7 +69,7 @@ const Navbaar = () => {
     }
 
     const logoutuser = async () =>{
-        const res2 = await fetch("/lougout",{
+        const res2 = await fetch("https://amazoncloneappapi.herokuapp.com/lougout",{
             method:"GET",
             headers:{
                 "Accept" :"application/json",
@@ -89,7 +89,7 @@ const Navbaar = () => {
             toast.success("user logout", {
                 position: "top-center",
             })
-            history("https://amazoncloneappapi.herokuapp.com/")
+            history("/")
             setAccount(false);
         }
     };
@@ -143,16 +143,16 @@ const Navbaar = () => {
             </div>
             <div className='right'>
                 <div className='nav_btn'>
-                    <NavLink to="https://amazoncloneappapi.herokuapp.com/login">signin</NavLink>
+                    <NavLink to="/login">signin</NavLink>
                 </div>
                 <div className='cart_btn'>
                     {
-                        account ?  <NavLink to="https://amazoncloneappapi.herokuapp.com/buynow">
+                        account ?  <NavLink to="/buynow">
                         <Badge badgeContent={account.carts.length} color="secondary">
                            <ShoppingCartIcon id="icon"/>
                         </Badge>
                         </NavLink>:
-                        <NavLink to="https://amazoncloneappapi.herokuapp.com/login">
+                        <NavLink to="/login">
                         <Badge badgeContent={0} color="secondary">
                            <ShoppingCartIcon id="icon"/>
                         </Badge>

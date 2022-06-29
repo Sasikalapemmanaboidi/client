@@ -28,7 +28,7 @@ const Sign_in = () => {
         e.preventDefault();
         const {email,password} = logdata;
 
-        const res = await fetch("https://amazoncloneappapi.herokuapp.com/login",{
+        const res = await fetch("/login",{
             method: "POST",
             headers: {
                 "Accept" :"application/json",
@@ -79,7 +79,7 @@ const Sign_in = () => {
             </div>
             <div className='create_accountinfo'>
                 <p>New To Amazon</p>
-            <NavLink to="https://amazoncloneappapi.herokuapp.com/register">
+            <NavLink to="/register">
                 <button>Create Your amazon account</button>
             </NavLink>    
             </div>
